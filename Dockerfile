@@ -9,4 +9,4 @@ FROM azul/zulu-openjdk-alpine:21-latest
 LABEL authors="watho"
 VOLUME /tmp
 COPY --from=build /app/target/*.jar /app/app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/app/app.jar"]
