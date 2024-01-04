@@ -22,7 +22,7 @@ public class AboutView extends VerticalLayout {
         RichText richText = new RichText();
         add(richText);
         try {
-            richText.withMarkDown(new ClassPathResource("resources/about.md").getInputStream());
+            richText.withMarkDown(new ClassPathResource("about.md").getInputStream());
         } catch (IOException e) {
             richText.setText(e.getMessage());
         }

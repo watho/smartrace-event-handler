@@ -2,7 +2,7 @@
 FROM maven:3.9.6-eclipse-temurin-21-jammy AS build
 COPY pom.xml /app/
 COPY src /app/src
-RUN mvn -f /app/pom.xml clean package
+RUN mvn -f /app/pom.xml clean package -Pproduction
 
 
 FROM azul/zulu-openjdk-alpine:21-latest
