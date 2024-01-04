@@ -2,6 +2,7 @@
 FROM maven:3.9.6-eclipse-temurin-21-jammy AS build
 COPY pom.xml /app/
 COPY src /app/src
+COPY frontend /app/frontend
 RUN mvn -f /app/pom.xml clean package -Pproduction
 
 
